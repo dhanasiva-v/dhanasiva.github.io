@@ -1,0 +1,344 @@
+/* Add keyframes for animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes bounceIn {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Apply animations to elements */
+header {
+    animation: fadeIn 2s ease-in-out;
+    position: relative;
+}
+
+#about-me {
+    animation: slideInLeft 1.5s ease-in-out;
+}
+
+#experience {
+    animation: slideInRight 1.5s ease-in-out;
+}
+
+#certifications {
+    animation: bounceIn 1.5s ease-in-out;
+}
+
+#skills {
+    animation: fadeIn 2s ease-in-out;
+}
+
+#education {
+    animation: slideInLeft 1.5s ease-in-out;
+}
+
+footer {
+    animation: fadeIn 2s ease-in-out;
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+.fadeInUp {
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+/* Content section styling */
+.content-section {
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.content-section:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.02);
+}
+
+/* Profile image styling */
+.profile-image {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    object-fit: cover; /* Ensures the image covers the container while maintaining aspect ratio */
+}
+
+.profile-image:hover {
+    transform: scale(1.1);
+}
+
+/* Icon styling */
+h2 i {
+    margin-right: 10px;
+    color: #f60808;
+}
+
+
+
+/* Desktop view */
+@media screen and (min-width: 768px) {
+    .container {
+        width: 70%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        border-radius: 8px;
+    }
+    header h1 {
+        font-size: 3em;
+        animation: bounceIn 1.5s ease-in-out;
+    }
+    h2 {
+        font-size: 2em;
+        animation: slideInRight 1s ease-in-out;
+    }
+    ul li {
+        font-size: 1.1em;
+        animation: fadeIn 1.5s ease-in-out;
+    }
+    footer p {
+        font-size: 1em;
+        animation: fadeIn 2s ease-in-out;
+    }
+}
+
+/* Mobile view */
+@media screen and (max-width: 767px) {
+    header {
+        padding: 15px 0;
+        animation: fadeIn 2s ease-in-out;
+    }
+    header h1 {
+        font-size: 1.8em;
+        animation: bounceIn 1.5s ease-in-out;
+    }
+    header p {
+        font-size: 0.9em;
+        animation: fadeIn 1.5s ease-in-out;
+    }
+    h2 {
+        font-size: 1.5em;
+        animation: slideInRight 1s ease-in-out;
+    }
+    ul li {
+        font-size: 0.9em;
+        animation: fadeIn 1.5s ease-in-out;
+    }
+    footer p {
+        font-size: 0.8em;
+        animation: fadeIn 2s ease-in-out;
+    }
+    .container {
+        width: 95%;
+    }
+    .profile-image {
+        width: 100px;
+        height: 100px;
+        margin-top: 10px; /* Add margin to create space between LinkedIn link and profile image */
+    }
+}
+
+@media screen and (max-width: 300px) {
+    header {
+        text-align: center;
+    }
+    .profile-image {
+        position: static;
+        margin: 0 auto 10px;
+        width: 100px;
+        height: 100px;
+    }
+    header h1 {
+        font-size: 1.2em;
+    }
+    header p {
+        font-size: 0.8em;
+    }
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .skill-box {
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 250px) {
+    .skills-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .skill-box {
+        width: 45%;
+    }
+}
+
+
+a:hover, button:hover {
+    color: #ff6347; /* Change color on hover */
+    transition: color 0.3s ease-in-out;
+}
+
+.fas, .fab {
+    transition: transform 0.3s ease-in-out;
+}
+
+.fas:hover, .fab:hover {
+    transform: scale(1.2);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Section Styles */
+section {
+    background: linear-gradient(to right, #e0f7fa, #e1bee7);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+section h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+section h2 i {
+    margin-right: 8px;
+}
+
+/* Card Styles */
+.card {
+    background: linear-gradient(to right, #25cfe5, #cf28ed); /* New gradient color combination */
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card p {
+    margin: 0;
+    font-size: 16px;
+    color: white;
+    text-align: justify;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 0 0 8px 8px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Card Styles for Strengths */
+#strengths .card {
+    background: linear-gradient(to right, #e0f7fa, #e1bee7); /* Gradient background */
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+#strengths .card:hover {
+    transform: translateY(-5px); /* Hover effect with slight upward movement */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#strengths .strength-item {
+    font-size: 18px;
+    color: #333; /* Text color */
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5); /* Soft line between items */
+    display: flex;
+    align-items: center; /* Align emoji with text */
+}
+
+#strengths .strength-item:last-child {
+    border-bottom: none; /* Remove line after last item */
+}
+
+#strengths .emoji {
+    font-size: 24px; /* Emoji size */
+    margin-right: 10px;
+}
+
+/* General Styles for Sections */
+section h2 {
+    font-size: 26px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
