@@ -205,6 +205,9 @@ h2 i {
         font-size: 1em;
         animation: fadeIn 2s ease-in-out;
     }
+    .profile-image{
+        margin-right: 50px;
+    }
 }
 
 /* Mobile view */
@@ -240,7 +243,6 @@ h2 i {
         width: 100px;
         height: 100px;
         margin-top: 10px; /* Add margin to create space between LinkedIn link and profile image */
-        margin-right: 50px;
     }
 }
 
