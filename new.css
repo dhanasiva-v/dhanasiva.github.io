@@ -240,6 +240,7 @@ h2 i {
         width: 100px;
         height: 100px;
         margin-top: 10px; /* Add margin to create space between LinkedIn link and profile image */
+        margin-right: 50px;
     }
 }
 
